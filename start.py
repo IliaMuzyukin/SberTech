@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import sys
 from calc import Calculator
 data=input("Type you calculation f.e.'6+5'\n")
 #print(data)
@@ -22,14 +22,14 @@ for d in newdata:
         newdata[1]=float(newdata[1])
     except ValueError:
         print('errror!')
+        sys.exit()
         break
     else:
         c=Calculator(newdata[0],newdata[1])
         actionlst=[c.Add(),c.Sub(),c.Mul(),c.Div()]
         cond=True
-        while cond:
 for i, character in enumerate(char):
-    print("----")
+    #print("----")
     if ch == character:
         print(actionlst[i])
         break
